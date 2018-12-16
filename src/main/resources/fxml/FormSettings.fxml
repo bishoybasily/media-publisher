@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="400.0" prefWidth="600.0"
+            styleClass="textureBackground" xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.gmail.bishoybasily.media.publisher.controller.ControllerSettings">
+    <children>
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="5.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" layoutX="143.0" layoutY="-36.0" spacing="5.0">
+                    <children>
+                        <ImageView fx:id="imageViewDevices" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../image/computer.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Goto devices"/>
+                        <Label text="Settings" textFill="WHITE">
+                            <effect>
+                                <DropShadow/>
+                            </effect>
+                            <font>
+                                <Font name="Comic Sans MS" size="25.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Separator prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                    </children>
+                    <padding>
+                        <Insets left="25.0"/>
+                    </padding>
+                </HBox>
+                <VBox alignment="CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <TextField fx:id="textFieldCommandsServerHost" alignment="CENTER" maxWidth="200.0"
+                                   minWidth="200.0" prefWidth="200.0" promptText="commands server host"/>
+                        <TextField fx:id="textFieldCommandsServerPort" alignment="CENTER" maxWidth="200.0"
+                                   minWidth="200.0" prefWidth="200.0" promptText="commands server port"/>
+                        <Separator maxWidth="300.0" minWidth="300.0" prefWidth="300.0"/>
+                        <TextField fx:id="textFieldRTSPServerHost" alignment="CENTER" maxWidth="200.0" minWidth="200.0"
+                                   prefWidth="200.0" promptText="rtsp server host"/>
+                        <TextField fx:id="textFieldRTSPServerPort" alignment="CENTER" maxWidth="200.0" minWidth="200.0"
+                                   prefWidth="200.0" promptText="rtsp server port"/>
+                        <TextField fx:id="textFieldRTSPServerApplication" alignment="CENTER" layoutX="185.0"
+                                   layoutY="108.0" maxWidth="200.0" minWidth="200.0" prefWidth="200.0"
+                                   promptText="rtsp server application"/>
+                        <Separator maxWidth="300.0" minWidth="300.0" prefWidth="300.0"/>
+                        <TextField fx:id="textFieldFTPServerHost" alignment="CENTER" maxWidth="200.0" minWidth="200.0"
+                                   prefWidth="200.0" promptText="ftp server host"/>
+                        <TextField fx:id="textFieldFTPServerPort" alignment="CENTER" maxWidth="200.0" minWidth="200.0"
+                                   prefWidth="200.0" promptText="ftp server port"/>
+                        <TextField fx:id="textFieldFTPServerName" alignment="CENTER" layoutX="10.0" layoutY="176.0"
+                                   maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="ftp server name"/>
+                        <TextField fx:id="textFieldFTPServerPassword" alignment="CENTER" layoutX="10.0" layoutY="146.0"
+                                   maxWidth="200.0" minWidth="200.0" prefWidth="200.0"
+                                   promptText="ftp server password"/>
+                        <Separator maxWidth="300.0" minWidth="300.0" prefWidth="300.0"/>
+                        <TextField fx:id="textFieldIdentity" alignment="CENTER" maxWidth="200.0" minWidth="200.0"
+                                   prefWidth="200.0" promptText="identity"/>
+                        <Separator maxWidth="300.0" minWidth="300.0" prefWidth="300.0"/>
+                        <HBox alignment="CENTER" spacing="5.0">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            </padding>
+                            <children>
+                                <VBox alignment="CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <TextField fx:id="textFieldVideoFilesPath" promptText="video files path"
+                                                   HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS"/>
+                                        <TextField fx:id="textFieldVideoFilesLength" alignment="CENTER" layoutX="10.0"
+                                                   layoutY="10.0" maxWidth="200.0" minWidth="200.0" prefWidth="200.0"
+                                                   promptText="video file length"/>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
+                                </VBox>
+                                <VBox alignment="CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <TextField fx:id="textFieldAudioFilesPath" promptText="audio files path"
+                                                   HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS"/>
+                                        <TextField fx:id="textFieldAudioFilesLength" alignment="CENTER" maxWidth="200.0"
+                                                   minWidth="200.0" prefWidth="200.0" promptText="audio file length"/>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Button fx:id="buttonSave" layoutX="218.0" layoutY="185.0" mnemonicParsing="false" text="Save"/>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

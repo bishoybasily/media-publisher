@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="457.0" prefWidth="552.0"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.gmail.bishoybasily.media.publisher.controller.ControllerMain">
+    <children>
+        <VBox alignment="CENTER" layoutX="50.0" layoutY="-36.0" prefHeight="457.0" prefWidth="552.0" spacing="5.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" layoutX="143.0" layoutY="-36.0" spacing="5.0">
+                    <children>
+                        <ImageView fx:id="imageViewSettings" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../image/settings.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Goto settings"/>
+                        <Label text="Devices" textFill="WHITE">
+                            <effect>
+                                <DropShadow/>
+                            </effect>
+                            <font>
+                                <Font name="Comic Sans MS" size="25.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Separator prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="25.0"/>
+                    </padding>
+                </HBox>
+                <SplitPane dividerPositions="0.4763636363636364" layoutX="177.0" layoutY="110.0"
+                           styleClass="transparenBackground" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0"
+                           AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" VBox.vgrow="ALWAYS">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <VBox layoutX="46.0" layoutY="82.0" prefHeight="455.0" prefWidth="160.0" spacing="5.0"
+                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="CENTER" spacing="5.0">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../image/camera.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Cameras"/>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                            </padding>
+                                        </HBox>
+                                        <ListView fx:id="listViewCameras" prefHeight="200.0" prefWidth="200.0"
+                                                  styleClass="transparenBackground" VBox.vgrow="ALWAYS"/>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <VBox prefHeight="355.0" prefWidth="232.0" spacing="5.0" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                      AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="CENTER" spacing="5.0">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../image/microphone.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Microphones"/>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                            </padding>
+                                        </HBox>
+                                        <ListView fx:id="listViewMicrophones" prefHeight="200.0" prefWidth="200.0"
+                                                  styleClass="transparenBackground" VBox.vgrow="ALWAYS"/>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+                <HBox alignment="CENTER" layoutX="35.0" layoutY="35.0" spacing="25.0">
+                    <children>
+                        <Label fx:id="labelThreads" text="Threads"/>
+                        <Label fx:id="labelOpenFiles" text="Files"/>
+                    </children>
+                    <padding>
+                        <Insets left="25.0"/>
+                    </padding>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
